@@ -5,19 +5,20 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.widget.RemoteViews;
 
+import com.twinfield.vyarovuy.twinfieldkpi.R;
+
 /**
  * Implementation of App Widget functionality.
- * App Widget Configuration implemented in {@link RevenueAppWidgetConfigureActivity RevenueAppWidgetConfigureActivity}
  */
-public class RevenueAppWidget extends AppWidgetProvider {
+public class TopAppWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-       // CharSequence widgetText = RevenueAppWidgetConfigureActivity.loadTitlePref(context, appWidgetId);
+        CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.revenue_app_widget);
-//        views.setTextViewText(R.id.appwidget_text, widgetText);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.top_app_widget);
+        views.setTextViewText(R.id.appwidget_text, widgetText);
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -29,14 +30,6 @@ public class RevenueAppWidget extends AppWidgetProvider {
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
         }
-    }
-
-    @Override
-    public void onDeleted(Context context, int[] appWidgetIds) {
-        // When the user deletes the widget, delete the preference associated with it.
-        //for (int appWidgetId : appWidgetIds) {
-        //    RevenueAppWidgetConfigureActivity.deleteTitlePref(context, appWidgetId);
-        //}
     }
 
     @Override

@@ -32,12 +32,24 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/revenue_app_widget_info" />
         </receiver>
-
-        <activity android:name=".RevenueAppWidgetConfigureActivity">
+        <receiver android:name=".UnpaidAppWidget">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-        </activity>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/unpaid_app_widget_info" />
+        </receiver>
+        <receiver android:name=".TopAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/top_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

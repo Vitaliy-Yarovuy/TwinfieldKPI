@@ -1,0 +1,95 @@
+BODY, HTML {
+   font-family: 'Verdana', sans-serif;
+}
+
+.desctop-tile {
+   height: 150px;
+   width: 150px;
+   vertical-align: top;
+   box-shadow: 1px 2px 2px #C3C3C3;
+   text-align: center;
+}
+
+.tile-caption {
+   color: #000;
+   text-align: left;
+   padding: 24px 0 0 16px;
+   font-size: 24px;
+   line-height: 24px;
+   height: auto;
+}
+
+.ct-label-line-0 {
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.ct-label-line-1 {
+   font-size: 11px;
+}
+
+.ct-label-overdue .ct-label-line-0 {
+   font-size: 11px;
+   font-weight: normal;
+}
+
+.ct-label {
+   fill: #000;
+   color: #000;
+   font-size: 11px;
+   text-transform: lowercase;
+}
+
+.ct-zero-level {
+   stroke-width: 2px;
+   stroke: rgba(0, 0, 0, 0.3);
+}
+
+.ct-grid.ct-vertical {
+   stroke: rgba(0, 0, 0, 0.1);
+   stroke-width: 1px;
+   stroke-dasharray: none;
+}
+
+.ct-bar {
+   stroke-width: 45px;
+}
+
+.ct-bar:nth-of-type(1) {
+   stroke: #EC9761;
+}
+
+.ct-bar:nth-of-type(2) {
+   stroke: #E6742E;
+}
+
+.ct-bar:nth-of-type(3) {
+   stroke: #F37565;
+}
+
+.ct-bar:nth-of-type(4) {
+   stroke: #D73C3C;
+}
+
+.chart-container {
+   position: absolute;
+   left: -30px;
+   right: 0;
+   bottom: 20px;
+   top: 80px;
+}
+
+.bar-charts-tile {
+   position: relative;
+   background-color: #FFF;
+   color:#FFF;
+   height: 310px;
+   width:  310px;
+}
+
+.graph-legend {
+   padding: 3px 0 0 16px;
+   color: #000;
+   font-size: 11px;
+   text-align: left;
+}

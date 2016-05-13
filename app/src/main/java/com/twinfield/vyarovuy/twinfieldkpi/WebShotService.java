@@ -52,7 +52,7 @@ public class WebShotService extends Service {
 
 //        webView.loadUrl("http://stackoverflow.com");
 //        webView.loadUrl("file:///android_asset/top.html");
-        webView.loadUrl("file:///android_asset/top.html");
+        webView.loadUrl("file:///android_asset/html/top.html");
 
         return START_STICKY;
     }

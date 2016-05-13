@@ -41,8 +41,8 @@ function prepareChartdata(response) {
 
     var dataObject = {
         options: {
-            height: 210,
-            width: 340,
+            height: 310,
+            width: 550,
             axisX: {
                 showGrid: false
             },
@@ -111,7 +111,6 @@ function createBarChart(response) {
 }
 
 createBarChart(responseDataMock);
-
 
 
 

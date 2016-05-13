@@ -12,6 +12,7 @@ import android.graphics.Point;
 import android.os.IBinder;
 import android.view.View;
 import android.view.WindowManager;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
@@ -52,6 +53,10 @@ public class WebShotService extends Service {
 
 //        webView.loadUrl("http://stackoverflow.com");
 //        webView.loadUrl("file:///android_asset/top.html");
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView.clearCache(true);
         webView.loadUrl("file:///android_asset/html/top.html");
 
         return START_STICKY;
@@ -66,9 +71,10 @@ public class WebShotService extends Service {
                     View.MeasureSpec.EXACTLY),
                     View.MeasureSpec.makeMeasureSpec((p.x < p.y ? p.x : p.y),
                             View.MeasureSpec.EXACTLY));
-            webView.layout(0, 0, webView.getMeasuredWidth(), webView.getMeasuredHeight());
+//            webView.layout(0, 0, webView.getMeasuredWidth(), webView.getMeasuredHeight());
+            webView.layout(0, 0, 550*2, 500*2);
 
-            webView.postDelayed(capture, 1000);
+            webView.postDelayed(capture, 500);
         }
     };
 
